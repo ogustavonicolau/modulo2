@@ -10,16 +10,20 @@
 //useState: importação do hook useState do react para controlar estados locais (como abrir e fechar Modal)
  
  import {
-    SafeAreaView, ScrollView, Pressable, Text, ActivityIndicator, Modal, View, StyleSheet
- } from "react-native"
+    ActivityIndicator, Modal,
+    Pressable,
+    SafeAreaView, ScrollView,
+    Text,
+    View
+} from "react-native";
 
  import {
     useState
- } from "react"
+} from "react";
 
  export default function modulo2 () {
     const [modalVisible, setModalVisible] = useState(false);
-    return ( 
+    return (
     <SafeAreaView style={styles.container}> 
         <ScrollView contentContainerStyle={styles.content}>
             <Text style={styles.title}> Bem Vindo </Text>
@@ -36,52 +40,10 @@
                     </View>
                 </View>
             </Modal>
-            <ActivityIndicator>
+            <ActivityIndicator/>
 
         </ScrollView>
-    </SafeAreaView>
-    const styles = StyleSheet.create ({
-        
-        //container: ocupa toda a tela
-        //content: espaçamento interno ao conteúdo rolável
-        //title: com fonte maior e espaçamento
-        //button: botão com margem inferior para separação
-        //buttonText: cor azul para o texto do botão
-        //modalOverlay: fundo escuro semi transparente para o modal
-        //modalContent: caixa branca com cantos arredondados do modal
-        //modalButton: botão de fechar com margem acima
-
-        content: {
-            padding:20
-        },
-        container: {
-            flex:1
-        },
-        button: {
-            marginBottom:20
-        },
-        buttonText: {
-            color:'blue'
-        },
-        title: {
-            fontSize:24,
-            marginBottom:20
-        },
-        modalOverlay: {
-            flex:1,
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'#0000099'
-        },
-        modalContent: {
-            backgroundColor:'white',
-            padding:20,
-            borderRadius:15
-        },
-        modalButton: {
-            marginTop:15
-        },
-
-    });
-)
- }
+    </SafeAreaView> 
+    );
+    
+ };
