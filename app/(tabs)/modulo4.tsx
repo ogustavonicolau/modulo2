@@ -45,14 +45,14 @@ export default function Modulo4() {
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.title}>Fale conosco</Text>
 
-            <TextInput
+            <TextInput style={styles.input}
                 placeholder="Digite seu nome"
                 value={nome}
                 onChangeText={setNome}
                 //limpa o campo nome 
             />
 
-            <TextInput
+            <TextInput style = {styles.input}
                 placeholder="Digite seu email"
                 value={email}
                 onChangeText={setEmail}
@@ -79,7 +79,7 @@ export default function Modulo4() {
             {/*mostra o texto de sucessso quando o enviado foir igual a === true */}
 
             {enviado && (
-                <Text style={styles.success} >mensagem ienviada com sucesso ! </Text>
+                <Text style={styles.success} >mensagem enviada com sucesso ! </Text>
             )}
             
             <Pressable style={styles.button}>
@@ -118,5 +118,18 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: 16,
+    },
+    success: {
+        color: 'green',
+        fontWeight: 'bold',
+        marginBottom: 10,
+    },
+    input: {
+        width: 500,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
+        borderRadius: 6,
+        marginBottom: 10,
     },
 });
