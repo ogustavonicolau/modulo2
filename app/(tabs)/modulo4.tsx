@@ -1,5 +1,6 @@
 // Importa o hook useState para gerenciar estado no componente.
 // O que é estado? É, por exemplo, se algo está aberto ou fechado, visível ou oculto, etc.
+import { router } from 'expo-router';
 import { useState } from 'react';
 import {
     ActivityIndicator,
@@ -82,7 +83,7 @@ export default function Modulo4() {
                 <Text style={styles.success} >mensagem enviada com sucesso ! </Text>
             )}
             
-            <Pressable style={styles.button}>
+            <Pressable style={styles.button} onPress = {()=>router.push ('/')}>
                 <Text style={styles.buttonText}>Home</Text>
             </Pressable>
         </ScrollView>
